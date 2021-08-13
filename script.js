@@ -1,5 +1,3 @@
-
-
 window.__minimog_menu_data = {
   hot: {
     bgColor: '#f8796e',
