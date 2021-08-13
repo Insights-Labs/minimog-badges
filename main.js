@@ -1,17 +1,1 @@
-window.__minimog_menu_data = {
-  hot: {
-    bgColor: '#f8796e',
-    urls: [
-      'https://hta218.myshopify.com/products/adidas-kids-stan-smith'
-    ]
-  },
-  new: {
-    bgColor: '#9a84c8',
-    urls: [
-      'https://hta218.myshopify.com/products/adidas-classic-backpack',
-      'https://hta218.myshopify.com/collections'
-    ]
-  }
-};
-
-(()=>{const e=document.querySelector(".sf-header__desktop");if(e){const t=document.createElement("link");t.rel="stylesheet",t.href="https://cdn.jsdelivr.net/gh/Insights-Labs/minimog-menu-badges/style.css",document.head.appendChild(t),Object.entries(window.__minimog_menu_data||{}).forEach((([t,{bgColor:n,urls:s}])=>{s.forEach((s=>{var o,l;const r=s.replace(window.location.origin,""),a=e.querySelector(`a[href="${r}"]`);if(a&&null!=a&&null!==(o=a.parentNode)&&void 0!==o&&null!==(l=o.classList)&&void 0!==l&&l.contains("sf__menu-item-level3")){const e=document.createElement("span");e.classList.add("mn-badge"),e.style.setProperty("--badge",`"${t}"`),e.style.setProperty("--bg-color",n),a.appendChild(e)}}))}))}})();
+(()=>{const e=document.querySelector(".sf-header__desktop");if(e){const t=document.createElement("link");t.rel="stylesheet",t.href="https://cdn.jsdelivr.net/gh/Insights-Labs/minimog-menu-badges/style.css",document.head.appendChild(t);const s={hot:"#f8796e",new:"#9a84c8"};fetch("https://script.google.com/macros/s/AKfycbzWbu68hydcmQPFzD4br4m7Myaeszmx55svOfQlsnuPhB15FAuwWrIuIjFh_juZMUOI/exec").then((e=>e.json())).then((t=>{t.success&&t.data.forEach((({badge:t,url:n})=>{var c,o;const l=n.replace(window.location.origin,""),a=e.querySelector(`a[href="${l}"]`);if(a&&null!=a&&null!==(c=a.parentNode)&&void 0!==c&&null!==(o=c.classList)&&void 0!==o&&o.contains("sf__menu-item-level3")){const e=document.createElement("span");e.classList.add("mn-badge"),e.style.setProperty("--badge",`"${t}"`),e.style.setProperty("--bg-color",s[t]),a.appendChild(e)}}))}))}})();
